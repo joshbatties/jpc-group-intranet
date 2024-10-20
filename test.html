@@ -33,21 +33,46 @@
         .header {
             text-align: center;
             margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #000; /* Added black dividing line */
         }
-        h1 {
-            color: var(--text-color);
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 5px;
-            letter-spacing: -0.5px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        .divider {
+            border-bottom: 1px solid #000;
+            margin: 15px 0;
         }
         .logo {
             max-width: 50px;
             height: auto;
             margin-bottom: 8px;
+        }
+        .small-card-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 15px 0;
+        }
+        .small-card {
+            flex: 1;
+            text-align: center;
+            padding: 10px 5px;
+            margin: 0 5px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+        .small-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+        .small-card img {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 5px;
+        }
+        .small-card p {
+            font-size: 8px;
+            margin: 0;
+            line-height: 1.2;
         }
         .intro {
             margin: 0 auto 15px;
@@ -101,9 +126,6 @@
                 padding: 8px;
                 margin: 5px;
             }
-            h1 {
-                font-size: 16px;
-            }
             .logo {
                 max-width: 40px;
             }
@@ -111,77 +133,44 @@
                 grid-template-columns: 1fr;
             }
         }
-
-        .small-card-row {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            margin: 15px 0;
-            padding: 5px 0;
-        }
-        .small-card {
-            flex: 0 0 auto;
-            width: 80px;
-            text-align: center;
-            padding: 10px 5px;
-            margin: 0 5px;
-            background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            text-decoration: none;
-            color: var(--text-color);
-        }
-        .small-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        }
-        .small-card img {
-            width: 30px;
-            height: 30px;
-            margin-bottom: 5px;
-        }
-        .small-card p {
-            font-size: 8px;
-            margin: 0;
-            line-height: 1.2;
-        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="header">
-            <img src="images/jpc_logo_black.png" alt="JPC Group Logo" class="logo">
-        </div>
-        
-        <div class="small-card-row">
-            <a href="#" class="small-card">
-                <img src="/api/placeholder/30/30" alt="BuildGreen Icon">
-                <p>BuildGreen</p>
-            </a>
-            <a href="#" class="small-card">
-                <img src="/api/placeholder/30/30" alt="ASI Icon">
-                <p>ASI</p>
-            </a>
-            <a href="#" class="small-card">
-                <img src="/api/placeholder/30/30" alt="JPC Timber Icon">
-                <p>JPC Timber</p>
-            </a>
-            <a href="#" class="small-card">
-                <img src="/api/placeholder/30/30" alt="PSS Icon">
-                <p>PSS</p>
-            </a>
-            <a href="#" class="small-card">
-                <img src="/api/placeholder/30/30" alt="JPC International Icon">
-                <p>JPC International</p>
-            </a>
-        </div>
-        
-        <p class="intro">JPC Group is diversified group of companies with our head office located in Melbourne, Australia. We drive innovation and sustainability across key industries, delivering cutting-edge integrated solutions for global markets.</p>
+<div class="container">
+    <div class="header">
+        <img src="images/jpc_logo_black.png" alt="JPC Group Logo" class="logo">
+        <h1>Welcome to JPC Group.</h1>
+    </div>
     
-        <div class="grid">
+    <div class="small-card-row">
+        <a href="https://jpcgroup365.sharepoint.com/:u:/r/sites/JPCGroupIntranet/SitePages/BuildGreen.aspx?csf=1&web=1&share=EUsSeIRhUu5MnQcXu0ugbY8B7Zz2kn_3F6PD5C8apLf85w&e=h7DRUl" class="small-card">
+            <img src="images/building.png" alt="BuildGreen Icon">
+            <p>BuildGreen</p>
+        </a>
+        <a href="https://jpcgroup365.sharepoint.com/:u:/r/sites/JPCGroupIntranet/SitePages/ASI.aspx?csf=1&web=1&share=EUPnfisJV-dPrAI8qKSnmGUBZdUh3KTr1JhUs8hFmO6PMQ&e=moMYFl" class="small-card">
+            <img src="images/steel (1).png" alt="ASI Icon">
+            <p>ASI</p>
+        </a>
+        <a href="https://jpcgroup365.sharepoint.com/:u:/r/sites/JPCGroupIntranet/SitePages/JPC-Timber.aspx?csf=1&web=1&share=EZI0-VxiUxJNmxr9y74TkI4BajfRIfI7lemAtqs522QAIA&e=kuLKJR" class="small-card">
+            <img src="images/wood.png" alt="JPC Timber Icon">
+            <p>JPC Timber</p>
+        </a>
+        <a href="https://jpcgroup365.sharepoint.com/:u:/r/sites/JPCGroupIntranet/SitePages/Pacific-Shipping-Services.aspx?csf=1&web=1&share=EUJIl0L6AWZGjmLKbvP_2KQBf1jdVI1pbxhmcsp4Pemysw&e=julHob" class="small-card">
+            <img src="images/cruise.png" alt="PSS Icon">
+            <p>PSS</p>
+        </a>
+        <a href="https://jpcgroup365.sharepoint.com/sites/JPCGroupIntranet/SitePages/JPC-International.aspx" class="small-card">
+            <img src="images/transportation.png" alt="JPC International Icon">
+            <p>JPC International</p>
+        </a>
+    </div>
+
+    <div class="divider"></div>
+    
+    <p class="intro">JPC Group is diversified group of companies with our head office located in Melbourne, Australia. We drive innovation and sustainability across key industries, delivering cutting-edge integrated solutions for global markets.</p>
+
+    <div class="grid">
         <div class="grid-item">
             <img src="images/ag.webp" alt="Agriculture">
             <h2>Agriculture</h2>
