@@ -31,18 +31,25 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .header {
-            text-align: center;
+            display: flex;
+            align-items: center;
             margin-bottom: 15px;
+            gap: 20px;
         }
         .divider {
             border-bottom: 1px solid #000;
             margin: 15px 0;
         }
         .logo {
-            max-width: 50px;
+            max-width: 56px; /* Increased from 35px to 42px (20% larger) */
             height: auto;
-            margin-bottom: 8px;
         }
+        .header h1 {
+            margin: 0;
+            font-size: 4rem;
+            text-align: center;
+        }
+        /* Rest of the CSS remains the same */
         .small-card-row {
             display: flex;
             justify-content: space-between;
@@ -127,11 +134,20 @@
                 margin: 5px;
             }
             .logo {
-                max-width: 40px;
+                max-width: 30px; /* Increased from 25px to 30px (20% larger) */
+            }
+            .header h1 {
+                font-size: 2.5rem;
             }
             .grid {
                 grid-template-columns: 1fr;
             }
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            text-align: center;
         }
     </style>
 </head>
@@ -140,7 +156,7 @@
 <div class="container">
     <div class="header">
         <img src="images/jpc_logo_black.png" alt="JPC Group Logo" class="logo">
-        <h1 style="font-size: 4rem;">Welcome to JPC Group.</h1>
+        <h1>Welcome to JPC Group.</h1>
     </div>
 
     <div class="divider"></div>
